@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.logo
+{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 105px;
+    left: 100px;
+}
+.card
+{
+    width: 740px;
+    height: 810px;
+    perspective: 1500px;
+}
+
+.content
+{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 1s cubic-bezier(0.75, 0, 0.85, 1);
+    border-radius: 8px;
+}
+.front
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    border-radius: 8px;
+}
+
+.inner
+{
+    height: 100%;
+    padding: 1.5em;
+    transform: translateZ(80px) scale(1);
+}
+
+h1
+{
+    position: absolute;
+    top: 103px;
+    left: 125px;
+    font-size: 15px;
+    color: rgba(20, 20, 20, 0.699);
+}
+
+h2
+{
+    font-family: 'Chelsea Market';
+    color: #e42c2c;
+    font-size: 40px;
+    padding: 7px;
+    text-align: center;
+    line-height: 1.4em;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191;
+}
+h3
+{
+    color: rgba(20, 20, 20, 0.699);
+    font-family: 'Chelsea Market';
+    font-size: 28px;
+    font-weight: bolder;
+    padding: 5px;
+    margin-top: 60px;
+    text-align: center;
+    line-height: 1.4em;
+    margin-bottom: 30px;
+}
+p
+{
+    font-size: 0.8rem;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.inputBox
+{
+    position: relative;
+    margin-top: 15px;
+    width: 570px;
+    left: 60px;
+}
+
+.inputBox input
+{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid rgb(170, 170, 170);
+    background: transparent;
+    border-radius: 5px;
+    outline: none;
+    color: #000000;
+    font-size: 0.8em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 0.8em;
+    color: rgb(100, 98, 98);
+    transition: 0.5s;
+    outline: none;  
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #fff;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.75em;
+    padding: 0 10px;
+    background: #bb2525;
+    border-left: 1px solid #bb2525;
+    border-right: 1px solid #bb2525;
+    letter-spacing: 0.1em;
+}
+.inputBox input:valid,
+.inputBox input:focus
+{
+    border: 2px solid #bb2525;
+}
+
+#lastname,
+#mobileNo,
+#ConfirmPassword,
+#studidNo
+{
+    margin-right: 121px;
+    width: 280px;
+    outline: none;
+    float: right;
+}
+
+#firstname,
+#EMail,
+#password,
+#username
+{
+    float: left;
+    width: 280px;
+    outline: none;
+}
+
+.front label
+{
+    position: absolute;
+    justify-content: center;
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    float: right;
+    right: 99px;
+}
+.front label:hover,
+.front label:nth-child(2)
+{
+    color: #bb2525;
+}
+.front button
+{
+    margin-left: 60px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: #df432c;
+    color: whitesmoke;
+    padding: 11px 25px;
+    width: 190px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover
+{
+    background-color: #cf3c27;
+}
+.label
+{
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    color: #8f8f8f;
+    padding-left: 75px;
+    margin-top: 10px;
+}
+
+.bday,
+.gendersex
+{
+    position: relative;
+    font-size: 0.8rem;
+    color: rgb(100, 98, 98); 
+    margin-left: 65px;
+    top: 2px;
+}
+.birthday,
+.gender
+{
+    display: block;
+}
+.Birthday_Month
+{
+    margin-left: 60px;
+    width: 220px;
+    text-align: center;
+}
+.Birthday_Day
+{
+    width: 120px;
+    text-align: center;
+}
+.Birthday_Year
+{
+    width: 220px;
+    text-align: center;
+}
+
+.Birthday_Month,
+.Birthday_Day,
+.Birthday_Year
+{
+    position: relative;
+    font-size: 0.8em;
+    height: 35px;
+    color: rgb(100, 98, 98);
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 5px;
+}
+
+.male_gender{
+    margin-left: 60px;
+    align-items: center;
+}
+
+.female_gender
+{
+   margin-left: 5px;
+   align-items: center;
+}
+
+.female_gender,
+.male_gender{
+    display: inline-flex;
+    position: relative;
+    border: 2px solid rgb(170, 170, 170);
+    border-radius: 5px;
+    color: rgb(100, 98, 98);
+    font-size: 0.8em;
+    height: 35px;
+    width: 280px;
+}
+.male,
+.female
+{
+    margin-left: 10px;
+}
+
+input[type="radio"] {
+   margin-left: auto;
+   margin-right: 10px;
+   cursor: pointer;
+}
+
+button[type="submit"]
+{
+    margin-top: 40px;
+    
+}
+
+.login
+{
+    text-decoration: none;
+    position: absolute;
+    font-size: 15px;
+    left: 318px;
+    margin-top: 130px;
+    color: #474747;
+    font-family: 'Chelsea Market';   
+}
+.login:hover
+{
+    color: #7383ec;
+}
+
+.text-danger
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ff7782;
+}
